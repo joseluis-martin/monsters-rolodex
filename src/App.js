@@ -2,11 +2,8 @@
 import { Component } from 'react';
 import { CardList } from './components/card-list/card-list.component';
 
-
 import './App.css';
 import { SearchBox } from './components/search-box/search-box.component';
-
-
 
 class App extends Component {
   constructor() {
@@ -16,7 +13,6 @@ class App extends Component {
       searchField: ''
     };
   }
-
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -42,9 +38,7 @@ class App extends Component {
           handleChange = {this.handleChange} />
         <CardList monsters={fiteredMonsters} />
       </div>  
-  );
+    );
+  }
 }
-  
-}
-
 export default App;
